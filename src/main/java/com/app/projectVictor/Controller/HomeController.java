@@ -15,15 +15,15 @@ public class HomeController {
     //Asta ar tb sa cheme Home Page cand rulez aplicatia.
     @GetMapping("/")
     public String index() {
-        return "LoginandRegistration";
+        return "Home";
     }
-@Autowired
+    @Autowired
     private RecipeService recipeService;
 
     @GetMapping("/")
     public String home(Model model) {
         List<Recipe> recipes = recipeService.getAllRecipesWithAverageScores();
         model.addAttribute("recipes", recipes);
-        return "home";
+        return "LoginandRegistration.html";
     }
 }

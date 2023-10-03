@@ -53,7 +53,7 @@ public class User {
     @Column(nullable=false)
     private String password;
 
-//Partea asta este pentru login + tot ce @@Column(nullable=false)
+    //Partea asta este pentru login + tot ce @@Column(nullable=false)
     @Column(nullable=false, unique=true)
     private String email;
 
@@ -64,7 +64,17 @@ public class User {
             inverseJoinColumns={@JoinColumn(name="ROLE_ID", referencedColumnName="ID")})
     private List<Role> roles = new ArrayList<>();
 
+    //Pentru testare
+    public User(int id, String username) {
+        this.id = id;
+        this.username = username;
+    }
 
+    public User(String password, String email, List<Role> roles) {
+        this.password = password;
+        this.email = email;
+        this.roles = roles;
+    }
 }
 
 
