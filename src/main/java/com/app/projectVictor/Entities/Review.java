@@ -35,4 +35,12 @@ public class Review {
     @ManyToOne
     @JoinColumn(name = "recipe_id")
     private Recipe recipe;
+
+    //Pentru testare
+
+
+    public Review(int id, int rating) {
+        this.id = id;
+        this.rating = rating;
+    }
 }

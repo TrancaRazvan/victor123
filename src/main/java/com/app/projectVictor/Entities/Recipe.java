@@ -58,5 +58,11 @@ public class Recipe {
     }
 
     private double averageScore;
-//.................................................................
+
+    //Pentru testare
+
+    public Recipe(int id, String title) {
+        this.id = id;
+        this.title = title;
+    }
 }
