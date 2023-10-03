@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+</head>
+<body>
+<header>
+    <h1>Welcome to Our Recipe Website</h1>
+</header>
+<nav>
+    <a href="/">Home</a>
+    <a href="/user">User Page</a>
+</nav>
+<div class="container">
+    <h2>Recipes</h2>
+    <ul>
+
+        <li th:each="recipe : ${recipes}">
+            <h3 th:text="${recipe.title}"></h3>
+            <p th:text="${recipe.description}"></p>
+            <p>Average Review: <span th:text="${calculateAverageReview(recipe.reviews)}"></span></p>
+            <p><a href="/">Home</a><p/>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
