@@ -18,8 +18,8 @@ import java.util.List;
 @Controller
 public class AuthController {
 
-//Asta ar trebui teoretic sa apeleze la home, login, registrarea si lista atunci cand cererea e facuta
-private UserServiceforLogin userServiceforLogin;
+    //Asta ar trebui teoretic sa apeleze la home, login, registrarea si lista atunci cand cererea e facuta
+    private UserServiceforLogin userServiceforLogin;
 
     public AuthController(UserServiceforLogin userServiceforLogin) {
         this.userServiceforLogin = userServiceforLogin;

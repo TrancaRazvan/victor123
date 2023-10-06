@@ -24,6 +24,6 @@ public class HomeController {
     public String home(Model model) {
         List<Recipe> recipes = recipeService.getAllRecipesWithAverageScores();
         model.addAttribute("recipes", recipes);
-        return "LoginandRegistration.html";
+        return "Home.html";
     }
 }

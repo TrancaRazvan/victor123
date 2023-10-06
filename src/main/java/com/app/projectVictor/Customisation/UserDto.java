@@ -14,7 +14,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 
-//Initial nu au mers anotarile. Tb vazut daca sunt ok acuma.
+//Initial nu au mers anotarile. Ar tb sa fie ok acuma.
 public class UserDto{
     private Long id;
     @NotEmpty

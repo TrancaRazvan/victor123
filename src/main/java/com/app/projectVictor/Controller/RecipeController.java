@@ -33,7 +33,7 @@ public class RecipeController {
         Optional<Recipe> recipe = recipeService.findRecipeById(id);
         return recipe.map(ResponseEntity::ok).orElse(ResponseEntity.notFound().build());
     }
-//Aici nu are rost verificare id-ul pentru ca cine face reteta o sa fie automat propretarul. Cred
+    //Aici nu are rost verificare id-ul pentru ca cine face reteta o sa fie automat propretarul. Cred
     @PostMapping
     public ResponseEntity<Recipe> createRecipe(@RequestBody Recipe recipe) {
         Recipe createdRecipe = recipeService.createRecipe(recipe);
@@ -51,7 +51,7 @@ public class RecipeController {
         }
     }
 
-//Aici teoretic ar trebui sa dea un ID la reteta ca sa o poata modifica-ish.
+    //Aici teoretic ar trebui sa dea un ID la reteta ca sa o poata modifica-ish.
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteRecipe(@PathVariable int id, @AuthenticationPrincipal UserDetails userDetails) {
         Optional<Recipe> existingRecipe = recipeService.findRecipeById(id);
