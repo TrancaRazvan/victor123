@@ -1,30 +1,132 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Home Page - Cooking Delights</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
 
+        header {
+            background-color: #ff6347;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        nav {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 24px;
+            color: #ff6347;
+        }
+
+        p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        a {
+            text-decoration: none;
+            color: #ff6347;
+            font-weight: bold;
+        }
+
+        /* New styles for images section */
+        .image-section {
+            margin-top: 30px;
+        }
+
+        .image-section h2 {
+            text-align: center;
+            font-size: 24px;
+            color: #ff6347;
+            margin-bottom: 20px;
+        }
+
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .image-gallery img {
+            margin: 10px;
+            max-width: 100%;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
 <body>
 <header>
-    <h1>Welcome to Our Recipe Website</h1>
+    <h1>Welcome to Cooking Delights</h1>
 </header>
 <nav>
     <a href="/">Home</a>
     <a href="/user">User Page</a>
 </nav>
 <div class="container">
-    <h2>Recipes</h2>
+    <h2>Explore The Community`s Delicious Recipes</h2>
     <ul>
-
         <li th:each="recipe : ${recipes}">
             <h3 th:text="${recipe.title}"></h3>
             <p th:text="${recipe.description}"></p>
             <p>Average Review: <span th:text="${calculateAverageReview(recipe.reviews)}"></span></p>
-            <p><a href="/">Home</a><p/>
+            <p><a href="/">Back to Home</a></p>
         </li>
     </ul>
+</div>
+
+<div class="container image-section">
+    <h2>Just think of what you can do! </h2>
+    <div class="image-gallery">
+        <img src="../static/image1.jpg" height="200" width="200">
+        <img src="../static/image2.jpg" height="200" width="300">
+        <img src="../static/image3.jpg" height="200" width="200">
+    </div>
 </div>
 </body>
 </html>

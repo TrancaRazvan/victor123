@@ -7,11 +7,9 @@ import org.springframework.data.annotation.Id;
 
 @Entity
 public class Recipe {
-
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     private String title;
     private String description;
     private int userId;
