@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
-//Clasa asta este penru login
 @Controller
 public class AuthController {
 

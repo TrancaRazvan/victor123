@@ -12,7 +12,6 @@ import java.util.List;
 @Controller
 public class HomeController {
 
-    //Asta ar tb sa cheme Home Page cand rulez aplicatia.
     @GetMapping("/")
     public String index() {
         return "Home";

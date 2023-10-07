@@ -11,13 +11,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-//Partea asta este pentru login
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name="users")
-//..............................
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

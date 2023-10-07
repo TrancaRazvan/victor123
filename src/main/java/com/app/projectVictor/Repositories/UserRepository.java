@@ -6,6 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface UserRepository extends JpaRepository<User, Integer> {
 
     //Partea asta este pentru login
-
     User findByEmail(String email);
 }

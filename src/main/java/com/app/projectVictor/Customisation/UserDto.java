@@ -7,8 +7,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
-//Clasa asta tine de login
 @Getter
 @Setter
 @NoArgsConstructor

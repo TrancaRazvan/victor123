@@ -12,7 +12,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-//Clasa asta tine de login
 @Service
 public class UserServiceImpl implements UserServiceforLogin {
 

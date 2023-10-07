@@ -40,7 +40,7 @@ public class RecipeController {
         return ResponseEntity.status(HttpStatus.CREATED).body(createdRecipe);
     }
 
-//Aici ar trebui sa dea un ID la reteta ca sa o poata modifica.
+    //Aici ar trebui sa dea un ID la reteta ca sa o poata modifica.
 
     public ResponseEntity<Recipe> updateRecipe(@PathVariable int id, @RequestBody Recipe updatedRecipe) {
         Recipe updated = recipeService.updateRecipe(id, updatedRecipe);

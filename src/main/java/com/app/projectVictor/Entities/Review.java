@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import org.springframework.data.annotation.Id;
 
 @Entity
+@Table(name="reviews")
+
 public class Review {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
