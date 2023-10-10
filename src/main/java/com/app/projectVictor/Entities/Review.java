@@ -1,7 +1,6 @@
 package com.app.projectVictor.Entities;
 
 import jakarta.persistence.*;
-import org.springframework.data.annotation.Id;
 
 @Entity
 @Table(name="reviews")

@@ -19,7 +19,7 @@ public class HomeController {
     @Autowired
     private RecipeService recipeService;
 
-    @GetMapping("/")
+    @GetMapping("/home")
     public String home(Model model) {
         List<Recipe> recipes = recipeService.getAllRecipesWithAverageScores();
         model.addAttribute("recipes", recipes);

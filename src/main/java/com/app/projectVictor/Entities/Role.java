@@ -1,11 +1,12 @@
 package com.app.projectVictor.Entities;
 
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
+
 
 import java.util.List;
 //Partea de Role tine de login
